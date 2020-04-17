@@ -2,7 +2,7 @@
 <html>
   
   <head>
-    <title>Login-Mechanismus</title>
+    <title>Registrierung</title>
   </head>
   
   <body>
