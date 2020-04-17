@@ -1,0 +1,5 @@
+-bplaced 
+FTP-Zugang:
+Server: notizapp.bplaced.net
+Benutzer: notizapp_admin
+Passwort: admin2020
