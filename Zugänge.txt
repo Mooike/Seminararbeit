@@ -1,4 +1,7 @@
 -bplaced 
+Login:
+Email: mike.leins@gmx.de
+Passwort: S7KvQrudwFnLwsa8
 FTP-Zugang:
 Server: notizapp.bplaced.net
 Benutzer: notizapp_admin
