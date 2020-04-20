@@ -17,7 +17,7 @@
 
 <?php 
  $benutzer = $_POST["Benutzer"];
- $passwort = password_hash($_POST["Passwort"], PASSWORD_DEFAULT);
+ $passwort = password_hash($_POST["Passwort"], PASSWORD_DEFAULT);//hash password
 
 
 
