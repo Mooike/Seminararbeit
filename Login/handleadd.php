@@ -32,7 +32,7 @@ require 'rb.php';
   $b->Passwort = $passwort;
   //$result = $mysqli->query($sql);
   echo "Erfolgreich registriert!";
-  R::store($b);
+  $id = R::store($b);
 
   R::close();
 //$mysqli->close();
