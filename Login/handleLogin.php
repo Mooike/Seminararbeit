@@ -24,7 +24,7 @@ require 'rb.php';
   R::setup('mysql:host=localhost;dbname=login', 'root', '');
   
   if ($dbobj = R::findOne('user', 'username = ?', [$user_entry])) {
-    if (password_verify($password_entry, $dbobj->password_entry) and $user_entry == $dbobj->benutzername) {
+    if (password_verify($password_entry, $dbobj->password) and $user_entry == $dbobj->username) {
       echo "Login sucessfull";
     }
     else {

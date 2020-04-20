@@ -18,11 +18,11 @@
 
 
 <?php 
-require 'ru.php';
+require 'rb.php';
  $user_entry = $_POST["user_entry"];
  $password_entry = password_hash($_POST["password_entry"], PASSWORD_DEFAULT);//hash password
 
- R::setup('mysql:host=localhost;duname=login', 'root', '');
+ R::setup('mysql:host=localhost;dbname=login', 'root', '');
   $u = R::dispense('user'); 
   
   $u->username = $user_entry;
