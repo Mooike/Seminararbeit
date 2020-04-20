@@ -33,7 +33,7 @@
 
  
 
- if ($passwort == $rowObj->Passwort and $benutzer == $rowObj->Benutzername) {
+ if (password_verify($passwort, $rowObj->Passwort) and $benutzer == $rowObj->Benutzername) {
    echo "Login erfolgreich";
  }
 else {
