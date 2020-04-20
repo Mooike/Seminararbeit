@@ -2,12 +2,14 @@
 <html>
   
   <head>
-    <title>Login-Mechanismus</title>
+    <title>Login</title>
   </head>
   
   <body>
-
-	
+  <form action="handleLogin.html">
+  <input type = "submit" value = "Back">
+  </form>
+  
   </body>
   
 </html>
@@ -17,32 +19,28 @@
 
 <?php 
 require 'rb.php';
- $benutzer = $_POST["Benutzer"];
- $passwort = $_POST["Passwort"];
-
+  $user_entry = $_POST["user_entry"];
+  $password_entry = $_POST["password_entry"];
+  R::setup('mysql:host=localhost;dbname=login', 'root', '');
+  
+  if ($dbobj = R::findOne('user', 'username = ?', [$user_entry])) {
+    if (password_verify($password_entry, $dbobj->password_entry) and $user_entry == $dbobj->benutzername) {
+      echo "Login sucessfull";
+    }
+    else {
+    echo "Wrong password!";
+    };
+  }
+  else {
+    echo "Username doesn't exist";
+  }
+  
+  
+  
+  
 
   
 
- $mysqli = new mysqli('localhost', 'test', '123', 'anmeldung');
- if ($mysqli->connect_errno) {
-  die('Verbindungsfehler (' . $mysqli->connect_errno. ') ' . $mysqli->connect_error);
- }
-
-  $sql = "SELECT * FROM `benutzer` WHERE `Benutzername` = '$benutzer'";
-  $result = $mysqli->query($sql);
-  $rowObj = $result->fetch_object();
-  
-
- 
-
- if (password_verify($passwort, $rowObj->Passwort) and $benutzer == $rowObj->Benutzername) {
-   echo "Login erfolgreich";
- }
-else {
-  echo "Falsche Eingabe";
-};
-
-$mysqli->close();
 
 ?>
 
