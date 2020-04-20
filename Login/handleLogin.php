@@ -16,10 +16,12 @@
 
 
 <?php 
+require 'rb.php';
  $benutzer = $_POST["Benutzer"];
  $passwort = $_POST["Passwort"];
 
 
+  
 
  $mysqli = new mysqli('localhost', 'test', '123', 'anmeldung');
  if ($mysqli->connect_errno) {
