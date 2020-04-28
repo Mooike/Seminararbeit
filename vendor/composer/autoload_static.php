@@ -7,12 +7,14 @@ namespace Composer\Autoload;
 class ComposerStaticInit302528041960601904658c9c2a6f77b5
 {
     public static $files = array (
+        '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
         'S' => 
         array (
+            'Slim\\Psr7\\' => 10,
             'Slim\\' => 5,
         ),
         'P' => 
@@ -24,11 +26,16 @@ class ComposerStaticInit302528041960601904658c9c2a6f77b5
         ),
         'F' => 
         array (
+            'Fig\\Http\\Message\\' => 17,
             'FastRoute\\' => 10,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'Slim\\Psr7\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/slim/psr7/src',
+        ),
         'Slim\\' => 
         array (
             0 => __DIR__ . '/..' . '/slim/slim/Slim',
@@ -50,6 +57,10 @@ class ComposerStaticInit302528041960601904658c9c2a6f77b5
         'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
+        ),
+        'Fig\\Http\\Message\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fig/http-message-util/src',
         ),
         'FastRoute\\' => 
         array (
