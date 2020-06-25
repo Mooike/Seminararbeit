@@ -24,8 +24,8 @@ session_start();
 require 'rb.php';
 R::setup('mysql:host=localhost;dbname=login', 'root', '');
 $title_entry = $_POST["title"];
-$uid= $_SESSION['uid'];
-if ($dbobj = R::findOne('list', 'title = ?', [$title_entry])){
+$uid = $_SESSION['uid'];
+if ($dbobj = R::findOne('list', 'title = ? AND userid = ?' , [$title_entry, $uid])){
   echo "Listennamen bereits vergeben";
 }
 else {
